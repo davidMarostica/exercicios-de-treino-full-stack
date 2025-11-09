@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Todo List</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header role="banner">
+        <h1>Lista de Tarefas Acessível</h1>
+      </header>
+
+      <main role="main" id="main-content">
+        <!-- Área de status para leitores de tela -->
+        <div
+          id="status-message"
+          aria-live="polite"
+          aria-atomic="true"
+          class="sr-only"
+        ></div>
+
+        <!-- Formulário para adicionar tarefas -->
+        <form id="todo-form" class="todo-form">
+          <div class="input-group">
+            <label for="task-input" class="sr-only">Nova tarefa</label>
+            <input
+              type="text"
+              id="task-input"
+              aria-required="true"
+              aria-describedby="error-message"
+              placeholder="Digite uma nova tarefa..."
+              class="task-input"
+            />
+
+            <button
+              type="submit"
+              id="add-task-btn"
+              aria-label="Adicionar tarefa"
+              class="add-btn"
+            >
+              Adicionar
+            </button>
+          </div>
+
+          <!-- Mensagem de erro -->
+          <div
+            id="error-message"
+            aria-live="assertive"
+            class="error-message"
+            hidden
+          ></div>
+        </form>
+
+        <!-- Lista de tarefas -->
+        <section aria-labelledby="tasks-heading">
+          <h2 id="tasks-heading" class="sr-only">Suas tarefas</h2>
+          <ul id="todo-list" class="todo-list" aria-label="Lista de tarefas">
+            <!-- Tarefas serão adicionadas aqui via JavaScript -->
+          </ul>
+        </section>
+      </main>
+
+      <footer role="contentinfo">
+        <p>&copy; 2024 Lista de Tarefas Acessível</p>
+      </footer>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+/* Tarefa 4: Esconder colunas em telas <= 768px */
+@media (max-width: 768px) {
+  .email,
+  .phone,
+  .website,
+  .address,
+  .company {
+    display: none;
+  }
+}
+
+/* Tarefa 5: Estilos para botão desabilitado */
+#getDataButton:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+/* Estilos da tabela */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f2f2f2;
+}
+
+/* Estilos básicos */
+#getDataButton {
+  padding: 10px 15px;
+  margin: 10px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#getDataButton:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+#navLink {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+#navLink:hover {
+  background-color: #218838;
+}

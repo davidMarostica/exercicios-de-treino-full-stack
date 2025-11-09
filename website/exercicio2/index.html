@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web UI Testing - 2</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Botão para revelar conteúdo escondido -->
+    <button id="revealButton">Show Content</button>
+
+    <!-- Conteúdo que será mostrado ao clicar no botão -->
+    <div id="hiddenContent" class="hidden">
+      <!-- Seção com lista -->
+      <section id="section2">
+        <h2>Section 2</h2>
+        <ul>
+          <li><a href="#item1">Item 1</a></li>
+          <li><a href="#item2">Item 2</a></li>
+          <li><a href="#item3">Item 3</a></li>
+        </ul>
+      </section>
+
+      <!-- Formulário -->
+      <form id="sampleForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <span class="error-message" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required />
+          <span class="error-message" id="ageError"></span>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
